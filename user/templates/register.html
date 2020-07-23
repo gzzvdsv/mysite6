@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div > span{
+            color : red;
+        }
+        div > label {
+            display: inline-block;
+            width:80px;
+        }
+    </style>
+</head>
+<body>
+<form action="/user/reg" method="post">
+    {% csrf_token %}
+  <div>
+      <label>用户名</label>
+      <input type="text" name="username" value="{{username}}">
+      <span>{{username_error}}</span>
+  </div>
+     <div>
+      <label>密码</label>
+      <input type="text" name="password" value="{{password}}">
+      <span>{{password_error}}</span>
+  </div>
+     <div>
+      <label>密码(重复)</label>
+      <input type="password" name="password2" value="{{password2}}">
+      <span>{{password2_error}}</span>
+  </div>
+
+    <div><input type="submit" value="注册"></div>
+
+
+</form>
+</body>
+</html>

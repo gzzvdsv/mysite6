@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mod note{{note.id}}</title>
+</head>
+<body>
+<div>
+    <form action="/note/mod/{{note.id}}"  method="post">
+        {% csrf_token %}
+    <label>{{note.title}}</label>
+    <input type="text" name="title">
+    <input type="submit" value="更改我的笔记">
+        <a href="/note/"> 返回笔记列表</a>
+        <!--<a href="/note/mod/1"> 查看更新后的title</a>-->
+<div>
+    <textarea name="content" id="" clos="30"
+              rows="10"></textarea>
+</div>
+  </form>
+    </div>
+</body>
+</html>

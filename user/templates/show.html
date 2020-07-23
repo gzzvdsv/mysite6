@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>show</title>
+</head>
+<body>
+<!--<form action="/user/reg" method="POST">-->
+    <!--<div>用户名{{title}}<input type="text" name="name" value="{{name}}"></div>-->
+    <!--<div>密码<input type="text" name="password" value="{{password}}"></div>-->
+    <!--<div>密码<input type="text" name="password" value="{{password}}"></div>-->
+    <!--<div><input type="submit" value="确定"></div>-->
+<!--</form>-->
+<!--{{name}}-->
+<!--{{password}}-->
+<h1>数据库中的所有用户</h1>
+<a href="/user/reg">返回添加用户的页面</a>
+<table>
+{% for i in users %}
+    <tr>
+<td>username:{{i.username}}</td>
+<td>password:{{i.password}}</td>
+    </tr>
+{% endfor %}
+</table>
+
+</body>
+</html>

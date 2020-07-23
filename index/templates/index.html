@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>云笔记主页</title>
+</head>
+
+{% if request.session and request.session.user %}
+欢迎:{{ request.session.user }}
+<a href="/user/out">退出登录</a>
+{% else %}
+<a href="/user/login">登录</a>
+<a href="/user/reg">注册</a>
+{% endif %}
+<div>
+{% if request.session and request.session.user %}
+<a href="/note/">进入我的云笔记</a>
+{% endif %}
+</div>
+</body>
+</html>
